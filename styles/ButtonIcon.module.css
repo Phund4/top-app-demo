@@ -1,0 +1,41 @@
+.button {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #7351f5;
+}
+.primary:hover {
+  background-color: #593cc2;
+}
+.primary svg * {
+  fill: white;
+}
+
+.white {
+  background-color: white;
+}
+.white:hover {
+  background-color: #7351f5;
+}
+.white:hover svg * {
+  fill: white;
+}
+.white svg * {
+  fill: #7351f5;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(90deg);
+  transition: all 0.2s;
+}/*# sourceMappingURL=ButtonIcon.module.css.map */

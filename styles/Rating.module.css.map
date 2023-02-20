@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../components/Rating/Rating.module.sass","../style/variable.sass"],"names":[],"mappings":"AAEA;EACI,MCDY;;;ADGhB;EACI;;;AAEJ;EACI;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA,OCdQ;;;ADgBZ;EACI,QCjBQ","file":"Rating.module.css"}

@@ -1,0 +1,28 @@
+@import ../../style/variable.sass
+    
+.textarea
+    padding: 7px 15px
+    width: 100%
+    color: $color-black
+    border: none
+    outline-color: $color-primary
+    background: $color-white
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+    border-radius: 5px
+    font-size: 16px
+    line-height: 22px
+    font-family: Arial, Helvetica, sans-serif
+    &::placeholder
+        color: $color-gray
+
+.error
+    border: 1px solid $color-red
+
+.textareaWrapper
+    position: relative
+
+.errorMessage
+    position: absolute
+    bottom: -15px
+    left: 0
+    color: $color-red

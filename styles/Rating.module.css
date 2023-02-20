@@ -1,0 +1,26 @@
+.filled svg {
+  fill: #7351f5;
+}
+
+.star svg {
+  margin-right: 5px;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.ratingWrapper {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #fc836d;
+}
+
+.error svg {
+  stroke: #fc836d;
+}/*# sourceMappingURL=Rating.module.css.map */

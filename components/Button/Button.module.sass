@@ -1,0 +1,38 @@
+@import ../../style/variable.sass
+    
+.button
+    display: inline-block
+    box-sizing: border-box
+    padding: 10px
+    cursor: pointer
+    text-align: center
+    border: none
+    border-radius: 5px
+    font-size: 14px
+    transition: all 0.2s
+
+.primary
+    color: $color-white
+    background-color: $color-primary
+    &:hover
+        background-color: $color-primary-hover
+    svg
+        fill: $color-white
+
+.ghost
+    color: $color-black
+    background-color: none
+    border: 1px solid $color-light-gray
+    &:hover
+        background-color: $color-primary
+        color: $color-white
+        svg
+            fill: $color-white
+
+.arrow 
+    display: inline-block
+    margin-left: 10px
+
+.down
+    transform: rotate(90deg)
+    transition: all 0.2s

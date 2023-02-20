@@ -1,0 +1,31 @@
+.textarea {
+  padding: 7px 15px;
+  width: 100%;
+  color: #3b434e;
+  border: none;
+  outline-color: #7351f5;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.textarea::placeholder {
+  color: #a4a4a4;
+}
+
+.error {
+  border: 1px solid #fc836d;
+}
+
+.textareaWrapper {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  color: #fc836d;
+}/*# sourceMappingURL=Textarea.module.css.map */

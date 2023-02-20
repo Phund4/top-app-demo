@@ -1,0 +1,57 @@
+.firstLevel {
+  display: grid;
+  text-decoration: none;
+  grid-template-columns: 24px 1fr;
+  gap: 20px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.firstLevelActive,
+.firstLevel:hover {
+  color: #7351f5;
+}
+
+.firstLevelActive svg,
+.firstLevel:hover svg {
+  fill: #7351f5;
+}
+
+.secondLevel {
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #6c7077;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.secondBlock {
+  margin-top: 15px;
+  margin-left: 12px;
+  padding-left: 32px;
+  border-left: 1px solid #ebebeb;
+}
+
+.secondLevelBlock {
+  overflow: hidden;
+}
+
+.thirdLevel {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  color: #6c7077;
+  font-weight: 500;
+  font-size: 14px;
+  height: 100%;
+  outline-offset: -1px;
+}
+
+.thirdLevelActive,
+.thirdLevel:hover {
+  color: #7351f5;
+}/*# sourceMappingURL=Menu.module.css.map */

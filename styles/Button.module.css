@@ -1,0 +1,45 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.primary {
+  color: white;
+  background-color: #7351f5;
+}
+.primary:hover {
+  background-color: #593cc2;
+}
+.primary svg {
+  fill: white;
+}
+
+.ghost {
+  color: #3b434e;
+  background-color: none;
+  border: 1px solid #ebebeb;
+}
+.ghost:hover {
+  background-color: #7351f5;
+  color: white;
+}
+.ghost:hover svg {
+  fill: white;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(90deg);
+  transition: all 0.2s;
+}/*# sourceMappingURL=Button.module.css.map */

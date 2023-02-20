@@ -1,0 +1,16 @@
+.search {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+}
+
+.button {
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  width: 35px;
+  height: 35px;
+  padding: 3px;
+}/*# sourceMappingURL=Search.module.css.map */

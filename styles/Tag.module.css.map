@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../components/Tag/Tag.module.sass","../style/variable.sass"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;EACA;EACA;;;AACJ;EACI;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI,OCjBU;EDkBV;;;AAEJ;EACI,OCpBU;EDqBV;EACA;;;AAEJ;EACI,OCzBU;ED0BV;EACA;;;AAEJ;EACI,OCzBU;ED0BV,YCzBgB;ED0BhB;;;AAEJ;EACI,OClCY;EDmCZ;EACA","file":"Tag.module.css"}

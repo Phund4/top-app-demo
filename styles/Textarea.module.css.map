@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../components/Textarea/Textarea.module.sass","../style/variable.sass"],"names":[],"mappings":"AAEA;EACI;EACA;EACA,OCLU;EDMV;EACA,eCLY;EDMZ,YCPU;EDQV;EACA;EACA;EACA;EACA;;AACA;EACI,OCJK;;;ADMb;EACI;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA,OCvBQ","file":"Textarea.module.css"}

@@ -1,0 +1,52 @@
+@import ../../style/variable.sass
+    
+.firstLevel
+    display: grid
+    text-decoration: none
+    grid-template-columns: 24px 1fr
+    gap: 20px
+    align-items: center
+    font-weight: 500
+    font-size: 18px
+    line-height: 25px
+    margin-top: 20px
+
+.firstLevelActive,
+.firstLevel:hover
+    color: $color-primary
+
+.firstLevelActive svg,
+.firstLevel:hover svg
+    fill: $color-primary
+
+.secondLevel
+    margin-bottom: 10px
+    cursor: pointer
+    text-transform: uppercase
+    color: $color-dark-gray
+    font-weight: 300
+    font-size: 12px
+
+.secondBlock
+    margin-top: 15px
+    margin-left: 12px
+    padding-left: 32px
+    border-left: 1px solid $color-light-gray
+
+.secondLevelBlock
+    overflow: hidden
+
+.thirdLevel
+    text-decoration: none
+    display: block
+    cursor: pointer
+    color: $color-dark-gray
+    font-weight: 500
+    font-size: 14px
+    height: 100%
+    outline-offset: -1px
+
+.thirdLevelActive,
+.thirdLevel:hover
+    color: $color-primary
+

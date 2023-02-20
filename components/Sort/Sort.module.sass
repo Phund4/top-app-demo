@@ -1,0 +1,26 @@
+@import ../../style/variable.sass
+    
+.sortIcon
+    display: none
+
+.active 
+    font-weight: bold
+    color: $color-primary
+    .sortIcon
+        display: block
+        margin-right: 8px
+
+.sort
+    display: inline-block
+    display: grid
+    grid-template-columns: repeat(2, auto)
+    gap: 40px
+    span
+        display: grid
+        gap: 8px
+        grid-template-columns: 20px 1fr
+        align-items: center
+        cursor: pointer
+        &:not(.active)
+            grid-template-columns: 1fr
+

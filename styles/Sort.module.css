@@ -1,0 +1,29 @@
+.sortIcon {
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+  color: #7351f5;
+}
+.active .sortIcon {
+  display: block;
+  margin-right: 8px;
+}
+
+.sort {
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px;
+}
+.sort span {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  cursor: pointer;
+}
+.sort span:not(.active) {
+  grid-template-columns: 1fr;
+}/*# sourceMappingURL=Sort.module.css.map */
