@@ -3,7 +3,6 @@ import styles from '@/styles/Up.module.css';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
-import UpIcon from './up.svg'
 export const Up = (): JSX.Element => {
     const controls = useAnimation();
     const y = useScrollY();
