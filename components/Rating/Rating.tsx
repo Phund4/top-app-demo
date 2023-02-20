@@ -4,17 +4,20 @@ import cn from 'classnames';
 import StarIcon from './star.svg';
 import { useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef } from 'react';
 
-export const Rating = forwardRef(({ isEditable = false, error, rating, setRating, className, ...props }: RatingProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Rating = forwardRef(({ isEditable = false, error, rating, setRating, className, ...props }: RatingProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
     useEffect(() => {
         constructRating(rating);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rating]);
 
     const constructRating = (currentRating: number) => {
         const updatedArray = ratingArray.map((r: JSX.Element, i:number) => {
             return (
                 <span
+                    key={r.key}
                     className={cn(styles.star, {
                         [styles.filled]: i < currentRating,
                         [styles.editable]: isEditable
@@ -38,14 +41,14 @@ export const Rating = forwardRef(({ isEditable = false, error, rating, setRating
             return;
         }
         constructRating(i);
-    }
+    };
 
     const onClick = (i:number) => {
         if (!isEditable || !setRating) {
             return;
         }
         setRating(i);
-    }
+    };
 
     const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
         if(e.code != 'Space' || !setRating) {
@@ -64,3 +67,6 @@ export const Rating = forwardRef(({ isEditable = false, error, rating, setRating
         </div>
     );
 });
+
+Rating.displayName = 'Rating';
+export default Rating;

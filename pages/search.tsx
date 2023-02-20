@@ -1,21 +1,16 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import { Htag, Button, P, Tag, Rating } from '@/components'
-import { useEffect, useState } from 'react';
+
 import { withLayout } from '@/layout/Layout';
-import { GetStaticProps } from 'next'
-import axios from 'axios'
+import { GetStaticProps } from 'next';
+import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 import { API } from '@/helpers/api';
-
-const inter = Inter({ subsets: ['latin'] })
 
 function Search(): JSX.Element {
   return (
     <>
         Search
     </>
-  )
+  );
 }
 
 export default withLayout(Search);
@@ -30,7 +25,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       menu,
       firstCategory
     }
-  }
+  };
 };
 
 interface HomeProps extends Record<string, unknown> {

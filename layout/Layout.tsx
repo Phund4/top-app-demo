@@ -5,7 +5,7 @@ import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { Sidebar } from './Sidebar/Sidebar';
 import { FunctionComponent, useState, KeyboardEvent, useRef } from 'react';
-import { AppContext, AppContextProvider, IAppContext } from '@/context/app.context';
+import { AppContextProvider, IAppContext } from '@/context/app.context';
 import { Up } from '@/components';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {

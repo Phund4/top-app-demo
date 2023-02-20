@@ -1,11 +1,9 @@
 import styles from '@/styles/ReviewForm.module.css';
 import { ReviewFormProps } from './ReviewForm.props';
 import cn from 'classnames';
-import { format } from 'date-fns'
-import { ru } from 'date-fns/locale'
-import { Rating } from '../Rating/Rating';
-import { Input } from '../Input/Input';
-import { Textarea } from '../Textarea/Textarea';
+import Rating from '../Rating/Rating';
+import Input from '../Input/Input';
+import Textarea from '../Textarea/Textarea';
 import { Button } from '../Button/Button';
 import CloseIcon from './close.svg';
 import { useForm, Controller } from 'react-hook-form';
@@ -29,11 +27,12 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
             } else {
                 setError('Что-то пошло не так');
             }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (e: any) {
             setError(e.message);
         }
         
-    }
+    };
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={cn(styles.reviewForm, className)} {...props}>

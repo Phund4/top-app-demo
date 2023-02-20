@@ -1,19 +1,19 @@
 import styles from '@/styles/Product.module.css';
 import { ProductProps } from './Product.props';
 import cn from 'classnames';
-import { Card } from '../Card/Card';
-import { Rating } from '../Rating/Rating';
+import Card from '../Card/Card';
+import Rating from '../Rating/Rating';
 import { Tag } from '../Tag/Tag';
 import { Button } from '../Button/Button';
 import { declOfNum, priceRu } from '@/helpers/helpers';
 import { Divider } from '../Divider/Divider';
-import Image from 'next/image';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
 
-export const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+// eslint-disable-next-line react/display-name
+const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
     const reviewRef = useRef<HTMLDivElement>(null);
 
@@ -34,13 +34,14 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
             behavior: 'smooth',
             block: 'start'
         });
-    }
+    };
 
     return (
         <div className={className} {...props} ref={ref}>
             <Card className={styles.product}>
                 <div className={styles.logo}>
-                    <Image src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
                         alt={product.title}
                         width={70}
                         height={70}
@@ -121,3 +122,6 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
         </div>
     );
 }));
+
+Product.displayName = 'Product';
+export default Product;

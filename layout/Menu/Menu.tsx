@@ -2,13 +2,11 @@ import { AppContext } from '@/context/app.context';
 import { FirstLevelMenuItem, PageItem } from '@/interfaces/menu.interface';
 import styles from '@/styles/Menu.module.css';
 import cn from 'classnames';
-import { format } from 'date-fns'
 import { useContext, KeyboardEvent } from 'react';
-import { TopLevelCategory } from '@/interfaces/page.interface';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { firstLevelMenu } from '@/helpers/helpers';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
 
 
 export const Menu = (): JSX.Element => {
@@ -27,7 +25,7 @@ export const Menu = (): JSX.Element => {
         hidden: {
             marginBottom: 0
         }
-    }
+    };
 
     const variantsChildren = {
         visible: {
@@ -38,7 +36,7 @@ export const Menu = (): JSX.Element => {
             opacity: 0,
             height: 0
         }
-    }
+    };
 
     const openSecondLevel = (secondCategory: string) => {
         setMenu && setMenu(menu.map(m => {
@@ -46,8 +44,8 @@ export const Menu = (): JSX.Element => {
                 m.isOpened = !m.isOpened;
             }
             return m;
-        }))
-    }
+        }));
+    };
 
     const OpenSecondLevelKey = (key: KeyboardEvent, secondCategory: string) => {
         if (key.code == 'Space' || key.code == 'Enter') {
@@ -61,7 +59,7 @@ export const Menu = (): JSX.Element => {
             <>
                 {firstLevelMenu.map(m => (
                     <div key={m.route}>
-                        <Link href={`/${m.route}`}>
+                        <Link href={`/${m.route}`} className={styles.firstLevelLink}>
                             <div className={cn(styles.firstLevel, {
                                 [styles.firstLevelActive]: m.id == firstCategory
                             })}>
@@ -74,7 +72,7 @@ export const Menu = (): JSX.Element => {
                 ))}
             </>
         );
-    }
+    };
 
     const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
         return (
@@ -108,7 +106,7 @@ export const Menu = (): JSX.Element => {
                 })}
             </div>
         );
-    }
+    };
 
     const buildThirdLevel = (pages: PageItem[], route: string, isOpened: boolean) => {
         return (
@@ -126,7 +124,7 @@ export const Menu = (): JSX.Element => {
                 
             ))
         );
-    }
+    };
 
     return (
         <div className={styles.menu}>

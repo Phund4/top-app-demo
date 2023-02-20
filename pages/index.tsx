@@ -1,23 +1,15 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import { Htag, Button, P, Tag, Rating, Input, Textarea } from '@/components'
-import { useEffect, useState } from 'react';
 import { withLayout } from '@/layout/Layout';
-import { GetStaticProps } from 'next'
-import axios from 'axios'
+import { GetStaticProps } from 'next';
+import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 import { API } from '@/helpers/api';
 
-const inter = Inter({ subsets: ['latin'] })
-
-function Home({menu}: HomeProps): JSX.Element {
-  const [rating, setRating] = useState<number>(4);
-
+function Home(): JSX.Element {
   return (
     <>
       
     </>
-  )
+  );
 }
 
 export default withLayout(Home);
@@ -32,7 +24,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       menu,
       firstCategory
     }
-  }
+  };
 };
 
 interface HomeProps extends Record<string, unknown> {

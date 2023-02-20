@@ -3,8 +3,6 @@ import { ButtonProps } from './Button.props';
 import ArrowIcon from './arrow.svg';
 import cn from 'classnames';
 import { motion, useMotionValue } from 'framer-motion';
-import { useEffect } from 'react';
-
 export const Button = ({ appearance, arrow = 'none', children, className, ...props }: ButtonProps): JSX.Element => {
     const scale = useMotionValue(1);
 
@@ -23,5 +21,5 @@ export const Button = ({ appearance, arrow = 'none', children, className, ...pro
         })}>
             <ArrowIcon/>
             </span>}
-    </motion.button>
+    </motion.button>;
 };

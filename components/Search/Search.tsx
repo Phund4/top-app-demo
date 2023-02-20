@@ -1,9 +1,9 @@
 import styles from '@/styles/Search.module.css';
 import { SearchProps } from './Search.props';
 import cn from 'classnames';
-import { Input } from '../Input/Input';
+import Input from '../Input/Input';
 import { Button } from '../Button/Button';
-import { KeyboardEventHandler, useState } from 'react';
+import { KeyboardEvent, useState } from 'react';
 import GlassIcon from './glass.svg'
 import { useRouter } from 'next/router';
 
